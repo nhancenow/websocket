@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.nhance.websocket.WebSocketApp.entity.ServiceRequestExtn" table="service_request_extn">
+        <id name="serviceRequestExtnId" type="java.lang.Long">
+            <column name="service_request_extn_id" length="64" />
+            <generator class="native" />
+        </id>
+        <property name="serviceRequestNumber" type="string">
+            <column name="service_request_number" length="32" not-null="true" />
+        </property>
+        <property name="extnKey" type="string">
+            <column name="extn_key" length="64" not-null="true" />
+        </property>
+        <property name="extnValue" type="string">
+            <column name="extn_value" length="128" not-null="true" />
+        </property>
+	</class>
+</hibernate-mapping>

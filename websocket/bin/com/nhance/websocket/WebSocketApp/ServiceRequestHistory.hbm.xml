@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.nhance.websocket.WebSocketApp.entity.ServiceRequestHistory" table="service_request_history">
+        <id name="serviceRequestHistoryId" type="java.lang.Long">
+            <column name="service_request_history_id" length="64" />
+            <generator class="native" />
+        </id>
+        <property name="serviceRequestNumber" type="string">
+            <column name="service_request_number" length="32" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="16" />
+        </property>
+        <property name="message" type="string">
+            <column name="message" length="512" />
+        </property>
+        <property name="attachedDocument" type="string">
+            <column name="attached_document" length="256" />
+        </property>
+        <property name="attachedDocumentFilename" type="string">
+            <column name="attached_document_filename" length="64" />
+        </property>
+        <property name="attachedDocumentFormat" type="string">
+            <column name="attached_document_format" length="16" />
+        </property>
+        <property name="customerId" type="string">
+            <column name="customer_id" length="32" not-null="true" />
+        </property>
+        <property name="customerName" type="string">
+            <column name="customer_name" length="64" />
+        </property>
+        <property name="sessionId" type="string">
+            <column name="session_id" length="256" />
+        </property>
+        <property name="token" type="string">
+            <column name="token" length="512" />
+        </property>
+        <property name="archiveId" type="string">
+            <column name="archive_id" length="128" />
+        </property>
+        <property name="archiveDuration" type="int">
+            <column name="archive_duration" length="32" />
+        </property>
+        <property name="archiveSize" type="int">
+            <column name="archive_size" length="32" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="512" />
+        </property>
+        <property name="customerCareCode" type="string">
+            <column name="customer_care_code" length="32" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="updated_by" length="64" not-null="true" />
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="updated_date" not-null="true" />
+        </property>
+	</class>
+</hibernate-mapping>

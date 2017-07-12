@@ -11,6 +11,8 @@ import javax.websocket.EndpointConfig;
 import org.bouncycastle.crypto.DataLengthException;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 
+import com.nhance.websocket.WebSocketApp.request.RequestMessage;
+
 public class MessageDecoder implements Decoder.Text<RequestMessage> {
 	private String seed = "0123456789abcdef";
 	

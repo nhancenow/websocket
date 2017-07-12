@@ -5,6 +5,8 @@ import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 
+import com.nhance.websocket.WebSocketApp.request.RequestMessage;
+
 public class MessageEncoder implements Encoder.Text<RequestMessage> {
 	private String seed = "0123456789abcdef";
 	
